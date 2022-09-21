@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +37,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "modern-normalize": "^1.1.0",
+    "prettier": "^2.7.1",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.4.0",
+    "react-toastify": "^9.0.8",
+    "react-use": "^17.4.0",
+    "slugify": "^1.6.5",
+    "styled-components": "^5.3.5"
+  },
+  "lint-staged": {
+    "*.js,jsx": "eslint --cache --fix",
+    "*.{js,jsx,css,md}": "prettier --write"
   }
 }
